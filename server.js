@@ -9,4 +9,4 @@ app.get('/', (req, res) => {
 
 app.use('/static', express.static('static'))
 
-app.listen(5000)
+app.listen(3000)
