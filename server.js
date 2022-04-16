@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs')
+app.set('port', 3000)
 
 app.get('/', (req, res) => {
 	res.render('index');
@@ -9,4 +10,4 @@ app.get('/', (req, res) => {
 
 app.use('/static', express.static('static'))
 
-app.listen(3000)
+app.listen(app.get('port'), () => console.log(`Node server listening on port ${app.get('port')}!`))
